@@ -1,0 +1,11 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+build:
+  docker:
+    worker: Dockerfile
+release:
+  image: worker
+run:
+  worker: python run_bot.py
