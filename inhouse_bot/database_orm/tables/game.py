@@ -113,7 +113,7 @@ class Game(bot_declarative_base):
                             if p.player_id not in validated_players
                             else " ✅"
                         )
-                        + f" {p.player_id}"  # And finally add the player name
+                        + f" <@{p.player_id}>"  # And finally add the player name
                         for idx, p in enumerate(getattr(self.teams, side))
                     ]
                 ),
